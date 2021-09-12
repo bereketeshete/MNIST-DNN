@@ -1,4 +1,5 @@
-## Get the basics
+## Neural Network Home Work #1
+# Author: Bereket Eshete
 
 
 import keras
