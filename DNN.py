@@ -1,5 +1,4 @@
-## Neural Network Home Work #1
-# Author: Bereket Eshete
+## Get the basics
 
 
 import keras
@@ -34,11 +33,9 @@ print(y_train[7])
 print(x_train.ndim)
 
 
-
 # View the dimension of tensor
 
 print(x_train.shape)
-
 
 
 # View the data type of tensor
@@ -95,7 +92,12 @@ from keras.models import Sequential
 from keras.layers.core import Dense, Activation
 
 model = Sequential()
-model.add(Dense(10, activation='sigmoid', input_shape=(784,)))
+model.add(Dense(150, input_shape=(784,)))
+model.add(Activation('sigmoid'))
+model.add(Dense(150))               # hidden layer 1
+model.add(Activation('sigmoid'))
+model.add(Dense(120))               # hidden layer 2
+model.add(Activation('sigmoid'))
 model.add(Dense(10, activation='softmax'))
 
 ##############################################################################
@@ -117,7 +119,7 @@ optimizer="sgd", metrics = ['accuracy'])
 
 # Training the model with fit() method
 
-model.fit(x_train, y_train, batch_size=100, epochs=10)
+model.fit(x_train, y_train, batch_size=64, epochs=20)
 
 
 # Evaluate model with evaluate() method
