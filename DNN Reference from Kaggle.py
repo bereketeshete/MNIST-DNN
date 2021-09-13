@@ -1,6 +1,6 @@
 ## Get the basics
 
-
+# REFERENCE - https://www.kaggle.com/prashant111/comprehensive-guide-to-ann-with-keras
 import keras
 
 
